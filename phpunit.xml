@@ -1,0 +1,24 @@
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+         backupGlobals="true"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true">
+<testsuites>
+  <testsuite name="Tests">
+    <directory suffix="TestCase.php">tests/</directory>
+  </testsuite>
+</testsuites>
+<filter>
+  <whitelist>
+    <directory suffix=".php">src</directory>
+  </whitelist>
+</filter>
+<logging>
+  <log type="coverage-html" target="build/report/html"/>
+  <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+  <log type="junit" target="build/report/phpunit-coverage.xml"/>
+</logging>
+</phpunit>

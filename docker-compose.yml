@@ -1,0 +1,8 @@
+version: "2.0"
+services:
+  web:
+    image: tanarurkerem/phpdev
+    volumes:
+      - "./:/project"
+      - "./composer-cache:/.composer/cache"
+    working_dir: "/project"
